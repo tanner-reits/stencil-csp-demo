@@ -4,7 +4,8 @@ import { format } from '../../utils/utils';
 @Component({
   tag: 'my-component',
   styleUrl: 'my-component.css',
-  shadow: true,
+  // Need to set false so CSP can be tested
+  shadow: false,
 })
 export class MyComponent {
   /**
