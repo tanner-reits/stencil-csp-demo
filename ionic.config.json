@@ -1,0 +1,7 @@
+{
+  "name": "stencil-csp-demo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
