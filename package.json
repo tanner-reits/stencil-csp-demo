@@ -10,7 +10,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "start:server": "tsc server.ts && node server.js"
+    "start:server-error": "tsc server-error.ts --outDir servers && node servers/server-error.js",
+    "start:server-valid": "tsc server-valid.ts --outDir servers && node servers/server-valid.js"
   },
   "private": true,
   "dependencies": {
