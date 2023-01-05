@@ -1,7 +1,6 @@
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { defineCustomElement } from 'my-lib/dist/components/my-component';
-import { setNonce } from 'my-lib/dist/components';
+import 'my-lib/dist/components/my-component';
 
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
@@ -18,9 +17,6 @@ fetch('nonce')
   .then((res) => res.json())
   .then(({ nonce }) => {
     console.log('FETCHED NONCE', nonce);
-    setNonce(nonce);
     return platformBrowserDynamic().bootstrapModule(AppModule);
   })
   .catch((err) => console.log(err));
-
-defineCustomElement();

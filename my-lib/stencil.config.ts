@@ -2,6 +2,7 @@ import { Config } from '@stencil/core';
 
 export const config: Config = {
   namespace: 'my-lib',
+  sourceMap: true,
   outputTargets: [
     {
       type: 'dist',
@@ -9,6 +10,8 @@ export const config: Config = {
     },
     {
       type: 'dist-custom-elements',
+      externalRuntime: false,
+      autoDefineCustomElements: true,
     },
     {
       type: 'docs-readme',
